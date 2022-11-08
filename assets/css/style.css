@@ -13,23 +13,16 @@
 body {
   background-color: rgb(232, 252, 252);
 }
-header a {
-  text-decoration: none;
-  color: white;
-}
-header a:hover {
-  color: black;
-  transition: all 0.25s ease-in;
-}
 
+
+/* Header and Nav Bar */
 header {
   background-color: var(--neutral-blue);
   padding: 20px;
-  color: rgb(255, 255, 255);
+  color: white;
   border-bottom: var(--space-grey) solid 7px;
 }
 
-/* Header and Nav Bar */
 header h1 {
   font-size: 200%;
   padding: 20px 0px 20px 50px;
@@ -42,6 +35,15 @@ header nav {
   font-size: 20px;
 }
 
+header a {
+  text-decoration: none;
+  color: white;
+}
+header a:hover {
+  color: black;
+  transition: all 0.25s ease-in;
+}
+
 header nav ul {
   list-style-type: none;
   padding: 0;
@@ -52,6 +54,7 @@ header nav ul li {
   margin-right: 25px;
   font-size: 150%;
 }
+
 /* Main Background */
 .background-image {
   height: 500px;
