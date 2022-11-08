@@ -14,7 +14,6 @@ body {
   background-color: rgb(232, 252, 252);
 }
 
-
 /* Header and Nav Bar */
 header {
   background-color: var(--neutral-blue);
@@ -71,6 +70,10 @@ header nav ul li {
   top: 58%;
   left: 7%;
   max-height: 300px;
+  min-height: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  object-fit: cover;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -78,6 +81,28 @@ header nav ul li {
   -o-border-radius: 50px;
   border: var(--space-grey) solid 3px;
 }
+#profile-picture img:last-child {
+  opacity: 0;
+}
+
+#profile-picture:hover img:first-child {
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  opacity: 0;
+  position:absolute;
+}
+#profile-picture:hover img:last-child {
+  opacity:1;
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+}
+
 h2 {
   display: flex;
   flex: 0 0 25%;
@@ -226,8 +251,11 @@ footer a:hover {
 /* Screen Shrink Behavior */
 @media screen and (max-width: 1645px) {
   #profile-picture img {
-    position:relative;
+    position: relative;
     left: 50%;
+  }
+  #profile-picture:hover img:first-child {
+    top:auto;
   }
 }
 @media screen and (max-width: 1372px) {
@@ -235,8 +263,8 @@ footer a:hover {
     min-width: 300px;
   }
   header {
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -252,9 +280,9 @@ footer a:hover {
     flex: 0 0 100%;
   }
 
- .page-section {
-  align-items: center;
- }
+  .page-section {
+    align-items: center;
+  }
   #profile-picture img {
     left: 25%;
   }
