@@ -13,45 +13,46 @@
 body {
   background-color: rgb(232, 252, 252);
 }
-.header a {
+header a {
   text-decoration: none;
   color: white;
 }
-.header a:hover {
+header a:hover {
   color: black;
   transition: all 0.25s ease-in;
 }
 
-.header {
+header {
   background-color: var(--neutral-blue);
   padding: 20px;
   color: rgb(255, 255, 255);
   border-bottom: var(--space-grey) solid 7px;
 }
 
-.header h1 {
+/* Header and Nav Bar */
+header h1 {
   font-size: 200%;
   padding: 20px 0px 20px 50px;
   display: inline-block;
 }
-.header section {
+header nav {
   padding-top: 30px;
   margin-right: 20px;
   float: right;
   font-size: 20px;
 }
 
-.header section ul {
+header nav ul {
   list-style-type: none;
   padding: 0;
 }
 
-.header section ul li {
+header nav ul li {
   display: inline-block;
   margin-right: 25px;
   font-size: 150%;
 }
-
+/* Main Background */
 .background-image {
   height: 500px;
   width: 100%;
@@ -62,6 +63,18 @@ body {
   border-bottom: var(--space-grey) solid 7px;
 }
 
+#profile-picture img {
+  position: absolute;
+  top: 58%;
+  left: 7%;
+  max-height: 300px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: var(--space-grey) solid 3px;
+}
 h2 {
   display: flex;
   flex: 0 0 25%;
@@ -79,6 +92,7 @@ section div {
   flex: 0 0 70%;
 }
 
+/* Works Pictures */
 #study-guide {
   background-image: url("../images/html-tutorial-beginners-header.png");
   background-repeat: no-repeat;
@@ -95,6 +109,16 @@ section div {
   background-image: url("../images/github.png");
 }
 
+/* Main Body Sections */
+.page-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 25px;
+}
+
+/* Sub boxes */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -135,6 +159,7 @@ section div {
   flex-grow: 1;
 }
 
+/* Body Labels */
 .work-label {
   display: flex;
   justify-content: center;
@@ -156,14 +181,7 @@ section div {
   -o-border-radius: 10px 0 0 0;
 }
 
-.page-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 10px;
-  margin: 25px;
-}
-
+/* Contact Information */
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -201,12 +219,26 @@ footer a:hover {
   background-size: 100% 100%;
   color: white;
 }
+
+/* Screen Shrink Behavior */
+@media screen and (max-width: 1645px) {
+  #profile-picture img {
+    position:relative;
+    left: 50%;
+  }
+}
 @media screen and (max-width: 1372px) {
   #study-guide {
     min-width: 300px;
   }
+  header {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
-
 @media screen and (max-width: 768px) {
   h2 {
     border-right: none;
@@ -217,6 +249,12 @@ footer a:hover {
     flex: 0 0 100%;
   }
 
+ .page-section {
+  align-items: center;
+ }
+  #profile-picture img {
+    left: 25%;
+  }
   footer ul {
     flex-direction: column;
   }
