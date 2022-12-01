@@ -127,8 +127,8 @@ section div {
   background-size: cover;
   min-width: 100%;
 }
-#portfolio {
-  background-image: url("../images/portfolio-background.webp");
+#pokemonfusion {
+  background-image: url("../images/pokemonfusion.jpeg");
 }
 #horiseon {
   background-image: url("../images/search-engine-optimization.jpg");
@@ -178,6 +178,7 @@ section div {
 .work-container:hover {
   background-image: url(../images/hacked.gif) !important;
 }
+
 .small-box {
   background-repeat: no-repeat;
   background-size: cover;
